@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remote Board — Live Remote Jobs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Remote Board</h1>
+  <p>Remote jobs from Remote OK, with a keyword search. The page always tells you whether the list is live or a dated snapshot — never one dressed up as the other.</p>
+</header>
+<main>
+  <div class="controls">
+    <label for="search">Search jobs</label>
+    <input id="search" type="search" placeholder="e.g. backend, python, support">
+    <button id="refresh" type="button">Refresh live feed</button>
+  </div>
+
+  <p class="mode" id="mode">Loading…</p>
+  <p class="status" id="status">Loading live data…</p>
+  <div class="error" id="error" hidden></div>
+  <p class="summary" id="summary"></p>
+  <ul class="list" id="list"></ul>
+
+  <footer>
+    <p>Data: <a href="https://remoteok.com/" target="_blank" rel="noopener">Remote OK</a> public API. Listings link back to Remote OK as the source. Auto-refresh tries the live feed every 15 minutes. Snapshot fallback: real listings captured from the live feed on 2026-10-29 — verify on remoteok.com before applying, as listings may have closed.</p>
+    <p id="sourceLine"></p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
